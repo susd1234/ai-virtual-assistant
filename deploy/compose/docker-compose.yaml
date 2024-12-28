@@ -33,11 +33,11 @@ services:
       APP_CHECKPOINTER_URL: ${APP_CHECKPOINTER_URL:-"postgres:5432"}
       # Postgres config
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-post@123}
       POSTGRES_DB: ${POSTGRES_DB:-postgres}
       # Postgres database name for customer data
       POSTGRES_USER_READONLY: ${POSTGRES_USER:-postgres_readonly}
-      POSTGRES_PASSWORD_READONLY: ${POSTGRES_PASSWORD:-readonly_password}
+      POSTGRES_PASSWORD_READONLY: ${POSTGRES_PASSWORD:-ro_post@123}
       CUSTOMER_DATA_DB: ${CUSTOMER_DATA_DB:-customer_data}
       CANONICAL_RAG_URL: http://unstructured-retriever:8081
       STRUCTURED_RAG_URI: http://structured-retriever:8081
@@ -114,7 +114,7 @@ services:
       APP_DATABASE_URL: ${APP_DATABASE_URL:-"postgres:5432"}
       # Postgres config
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-post@123}
       POSTGRES_DB: ${POSTGRES_DB:-postgres}
       # Postgres database name for customer data
       CUSTOMER_DATA_DB: ${CUSTOMER_DATA_DB:-customer_data}
@@ -223,7 +223,7 @@ services:
       APP_DATABASE_NAME: ${APP_DATABASE_NAME:-"postgres"}
       APP_DATABASE_URL: ${APP_DATABASE_URL:-"postgres:5432"}
       POSTGRES_USER: ${POSTGRES_USER:-postgres_readonly}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-readonly_password}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ro_post@123}
       POSTGRES_DB: ${POSTGRES_DB:-customer_data}
       CSV_NAME: PdM_machines
       LOGLEVEL: ${LOGLEVEL:-INFO}
@@ -250,7 +250,7 @@ services:
     image: postgres:17.1
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-post@123}
       POSTGRES_DB: ${POSTGRES_DB:-customer_data}
     command:
       - "postgres"
@@ -276,7 +276,7 @@ services:
     image: dpage/pgadmin4:8.13.0
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-ad_post@123}
       PGADMIN_CONFIG_SERVER_MODE: 'False'
     user: '$UID:$GID'
     volumes:

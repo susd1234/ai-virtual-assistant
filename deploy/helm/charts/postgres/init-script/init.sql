@@ -1,5 +1,5 @@
 -- Create a new read-only user
-CREATE USER "postgres_readonly" WITH PASSWORD 'readonly_password';
+CREATE USER "postgres_readonly" WITH PASSWORD 'ro_post@123';
 
 -- Grant CONNECT permission to the database
 GRANT CONNECT ON DATABASE customer_data TO "postgres_readonly";

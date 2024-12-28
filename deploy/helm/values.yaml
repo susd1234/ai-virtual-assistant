@@ -45,13 +45,13 @@ agent-services:
           - name: POSTGRES_USER
             value: postgres
           - name: POSTGRES_PASSWORD
-            value: password
+            value: post@123
           - name: POSTGRES_DB
             value: postgres
           - name: POSTGRES_USER_READONLY
             value: postgres_readonly
           - name: POSTGRES_PASSWORD_READONLY
-            value: readonly_password
+            value: ro_post@123
           - name: CANONICAL_RAG_URL
             value: http://retriever-canonical-canonical-deployment-canonical-service:8086
           - name: STRUCTURED_RAG_URI
@@ -105,7 +105,7 @@ analytics-services:
           - name: POSTGRES_USER
             value: postgres
           - name: POSTGRES_PASSWORD
-            value: password
+            value: post@123
           - name: POSTGRES_DB
             value: postgres
           - name: CUSTOMER_DATA_DB
@@ -249,7 +249,7 @@ retriever-structured:
           - name: POSTGRES_USER
             value: postgres_readonly
           - name: POSTGRES_PASSWORD
-            value: readonly_password
+            value: ro_post@123
           - name: POSTGRES_DB
             value: customer_data
           - name: CSV_NAME
