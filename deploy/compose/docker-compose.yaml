@@ -259,7 +259,7 @@ services:
       - "-c"
       - "max_connections=200"
     volumes:
-       - ./init-scripts:/docker-entrypoint-initdb.d  # Mount initialization scripts
+       - ./init-scripts:/docker-entrypoint-initdb.d:z  # Mount initialization scripts
        - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
