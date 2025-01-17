@@ -33,6 +33,30 @@ from src.agent.tools import (
 from src.agent.utils import get_product_name, create_tool_node_with_fallback, get_checkpointer, canonical_rag
 from src.common.utils import get_llm, get_prompts
 
+# msg
+import logging
+import sys
+
+# Create a logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# Create a handler that writes to stdout
+handler = logging.StreamHandler(sys.stdout)
+handler.setLevel(logging.INFO)
+
+# Create a formatter and set it for the handler
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+
+# Add the handler to the logger
+logger.addHandler(handler)
+
+# Log an info message
+logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
+
+# msg
+
 
 logger = logging.getLogger(__name__)
 logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
