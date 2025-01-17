@@ -6,6 +6,8 @@ FROM ${BASE_IMAGE_URL}:${BASE_IMAGE_TAG}
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV DEBIAN_FRONTEND noninteractive
 
+ENV PYTHONUNBUFFERED=1
+
 # Install required ubuntu packages for setting up python 3.10
 RUN apt update && \
     apt install -y curl software-properties-common && \
