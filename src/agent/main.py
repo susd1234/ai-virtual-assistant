@@ -35,6 +35,7 @@ from src.common.utils import get_llm, get_prompts
 
 
 logger = logging.getLogger(__name__)
+logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
 prompts = get_prompts()
 # TODO get the default_kwargs from the Agent Server API
 default_llm_kwargs = {"temperature": 0.2, "top_p": 0.7, "max_tokens": 1024}
