@@ -91,7 +91,7 @@ def validate_product_info(state: State, config: RunnableConfig):
     # Add the handler to the logger
     logger.addHandler(handler)
 
-    # Log an info message
+    # Log an info message   --> msg
     logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
 
     # msg <--msg-->
