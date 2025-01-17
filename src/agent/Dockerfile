@@ -43,7 +43,7 @@ RUN --mount=type=bind,source=src/agent/requirements.txt,target=/opt/agent/requir
 COPY src/common /opt/src/common
 
 # Copy and Install agent specific modules
-COPY /home/ubuntu/ai-virtual-assistant/src/agent /opt/src/agent
+COPY src/agent /opt/src/agent
 
 WORKDIR /opt
 ENTRYPOINT ["uvicorn", "src.agent.server:app"]
