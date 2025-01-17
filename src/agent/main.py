@@ -51,6 +51,7 @@ class State(TypedDict):
 
 # NODES FOR THE AGENT
 def validate_product_info(state: State, config: RunnableConfig):
+    print("This is an NVIDIA PoV Development Work Done by Cognizant") #SD
     # This node will take user history and find product name based on query
     # If there are multiple name of no name specified in the graph then it will
 
