@@ -37,7 +37,7 @@ from src.common.utils import get_llm, get_prompts
 import logging
 import sys
 
-# Create a logger
+# Create a logger <--msg-->
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -55,7 +55,7 @@ logger.addHandler(handler)
 # Log an info message
 logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
 
-# msg
+# msg <--msg-->
 
 
 logger = logging.getLogger(__name__)
@@ -76,6 +76,25 @@ class State(TypedDict):
 
 # NODES FOR THE AGENT
 def validate_product_info(state: State, config: RunnableConfig):
+        # Create a logger <--msg-->
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+
+    # Create a handler that writes to stdout
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setLevel(logging.INFO)
+
+    # Create a formatter and set it for the handler
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+
+    # Add the handler to the logger
+    logger.addHandler(handler)
+
+    # Log an info message
+    logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
+
+    # msg <--msg-->
     print("This is an NVIDIA PoV Development Work Done by Cognizant")
     # This node will take user history and find product name based on query
     # If there are multiple name of no name specified in the graph then it will
