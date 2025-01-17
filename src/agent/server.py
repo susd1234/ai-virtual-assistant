@@ -357,7 +357,7 @@ async def generate_answer(request: Request,
         # Log an info message   --> msg
     logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
     
-    logger.info(f"Input at /generate endpoint of Agent: {prompt.dict()}")
+    logger.info(f"This is an NVIDIA PoV Development Work Done by Cognizant - Input at /generate endpoint of Agent: {prompt.dict()}")
 
     try:
         user_query_timestamp = time.time()
