@@ -16,7 +16,7 @@ services:
       dockerfile: ./src/agent/Dockerfile
     command: --port 8081 --host 0.0.0.0 --workers 1 --loop asyncio
     environment:
-      EXAMPLE_PATH: './src/agent'
+      # EXAMPLE_PATH: './src/agent'
       #APP_LLM_MODELNAME: ${APP_LLM_MODELNAME:-"meta/llama-3.1-70b-instruct"}
       APP_LLM_MODELNAME: ${APP_LLM_MODELNAME:-"meta/llama-3.1-405b-instruct"}
       APP_LLM_MODELENGINE: nvidia-ai-endpoints
