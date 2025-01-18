@@ -53,7 +53,7 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 # Log an info message
-logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
+# logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
 
 # msg <--msg-->
 
@@ -92,10 +92,10 @@ def validate_product_info(state: State, config: RunnableConfig):
     logger.addHandler(handler)
 
     # Log an info message   --> msg
-    logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
+    # logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
 
     # msg <--msg-->
-    print("This is an NVIDIA PoV Development Work Done by Cognizant")
+    # print("This is an NVIDIA PoV Development Work Done by Cognizant")
     # This node will take user history and find product name based on query
     # If there are multiple name of no name specified in the graph then it will
 
@@ -153,7 +153,7 @@ async def handle_other_talk(state: State, config: RunnableConfig):
 
 
 def create_entry_node(assistant_name: str) -> Callable:
-    print("This is an NVIDIA PoV Development Work Done by Cognizant")
+    # print("This is an NVIDIA PoV Development Work Done by Cognizant")
     def entry_node(state: State) -> dict:
         tool_call_id = state["messages"][-1].tool_calls[0]["id"]
         return {
@@ -202,7 +202,7 @@ async def ask_clarification(state: State, config: RunnableConfig):
     return {"messages": [response]}
 
 async def handle_product_qa(state: State, config: RunnableConfig):
-    print("This is an NVIDIA PoV Development Work Done by Cognizant")
+    # print("This is an NVIDIA PoV Development Work Done by Cognizant")
 
     # Extract the previous_conversation
     previous_conversation = [m for m in state['messages'] if not isinstance(m, ToolMessage) and m.content]
