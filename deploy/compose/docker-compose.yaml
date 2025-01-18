@@ -11,8 +11,9 @@ services:
     image: nvcr.io/nvidia/blueprint/aiva-customer-service-agent:1.1.0
     build:
       # Set context to repo's root directory
+      # context: ../../
       context: ../../
-      dockerfile: src/agent/Dockerfile
+      dockerfile: ./src/agent/Dockerfile
     command: --port 8081 --host 0.0.0.0 --workers 1 --loop asyncio
     environment:
       EXAMPLE_PATH: './src/agent'
