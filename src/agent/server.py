@@ -355,7 +355,9 @@ async def generate_answer(request: Request,
     """Generate and stream the response to the provided prompt."""
 
         # Log an info message   --> msg
-    logger.info("This is an NVIDIA PoV Development Work Done by Cognizant")
+    logger.info("************************************************************")
+    logger.info("* This is an NVIDIA PoV Development Work Done by Cognizant *")
+    logger.info("************************************************************")
     
     logger.info(f"Input at /generate endpoint of Agent: {prompt.dict()}")
 
